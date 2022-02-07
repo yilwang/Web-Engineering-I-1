@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mileage Calculator</title>
+</head>
+
+<body>
+    <h1>Assignment 10</h1>
+    <h2>Mileage Calculator</h2>
+    <form id="mileageForm" name="mileageCalculator">
+        <div class="row">Starting City: <input id="startcity" type="text" name="startCity" required />
+        </div>
+        <br>
+        <div class="row">Starting State: <input id="startstate" type="text" name="startState" required />
+        </div>
+        <br>
+        <div class="row">Ending City: <input id="endcity" type="text" name="endCity" required />
+        </div>
+        <br>
+        <div class="row">Ending State: <input id="endstate" type="text" name="endState" required />
+        </div>
+        <br>
+        <div class="button">
+            <input id ="reset" type="reset" name="reset" value="Reset">
+            <input id ="submit" type="button" name="submit" value="Calculate Mileage" onclick="getMileage()">
+        </div>
+    </form>
+    <div id="mileage"></div>
+
+    <script>
+        var mForm = document.getElementById('mileageForm');
+        var mResponseDiv = document.getElementById('mileage');
+        function getMileage() {
+            //Build query
+            var uri = '/cgi-bin/cs213/mileageAjaxJSON';
+            var query = '?startCity=' + mForm.startCity.value +
+                '&startState=' + mForm.startState.value +
+                '&endCity=' + mForm.endCity.value +
+                '&endState=' + mForm.endState.value;
+
+            //Create new AJAX request
+            var xhr = new XMLHttpRequest();
+
+            //Callback function to handle AJAX response
+            xhr.onreadystatechange = function () {
+                // AJAX request was completed successfully
+                if (this.status == 200 && this.readyState == 4) {
+                    var trip = JSON.parse(this.responseText).trip;
+                    var response = "";
+                    if (trip.miles == "Unknown") {
+                        //Response from server included miles
+                        response += "<p>Mielage from " + trip.miles +
+                            " miles from " + trip.startcity +
+                            ", " + trip.startstate +
+                            " to " + trip.endcity +
+                            ", " + trip.endstate +
+                            "is unknown. </p>"
+                    } else {
+                        //Response from server included miles
+                        response += "<p> It is " + trip.miles +
+                            " miles from " + trip.startcity +
+                            ", " + trip.startstate +
+                            " to " + trip.endcity +
+                            ", " + trip.endstate + "</p>";
+
+                        if (trip.tmode) {
+                            //Server response included travel mode
+                            response += "<p> You may travel by any of these methods: </p><uls>"
+                            for (mode of trip.tmode) {
+                                response += "<li>" + mode + "</li>";
+                            }
+                            response += "</ul>";
+                        }
+                    }
+                    // Display result 
+                    mResponseDiv.innerHTML = response;
+                } else if (this.status != 200 && this.readyState == 4) {
+                    // Something went wrong with the request to server
+                    mResponseDiv.innerHTML = "<p class = 'error-msg'>Something went wrong with the request to the server. Please try again later. </p>";
+                    console.log('error with AJAX request, status = ' + this.status);
+                }
+            }
+
+            // Use a GET request to pass query data to server
+            xhr.open("GET", uri + query);
+            xhr.send(null);
+
+            // return false to prevent browser from submitting form
+            return false;
+        }
+
+
+
+        /*Handle Reset Button*/
+        mForm.onreset = function () {
+            // clear the calculator output
+            mResponseDiv.innerHTML = "";
+        }
+
+    </script>
+    <br>
+    <br>
+    <br>
+
+    <footer class="foot">
+        <a class="col-md-4" href="#">Privacy Policy</a>
+        <a class="col-md-4" href="#">Terms of Use</a>
+        <div class="copyright">Copyright &copy; Mileage Corp. 2020</div>
+    </footer>
+</body>
+
+</html>

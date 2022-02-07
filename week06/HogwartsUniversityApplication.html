@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for Hogwarts University Here">
+    <title>Apply for Hogwarts University</title>
+    <style>
+        h1 {
+            font-size: 30px;
+            font-family: cursive;
+            font-style: italic;
+            text-align: center;
+        }
+
+        #email,
+        #phone,
+        #firstname,
+        #lastname,
+        #from,
+        #school,
+        #amount,
+        #learn,
+        #medium,
+        select {
+            padding: 4px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 10px;
+        }
+
+        textarea,
+        select {
+            padding: 4px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 100%;
+            align-self: start;
+        }
+
+        textarea {
+            margin-left: 150px;
+            font-size: 10px;
+        }
+
+        #form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        label{
+            font-size: 15px;
+            margin-left: 150px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <p>Hogwarts University <img id ="logo" src="css/Hogwarts_Logo.jpg" alt="Hogwarts logo"></p>
+        <ul>
+            <li><a href="HogwartsUniversityHome.html">Home</a></li>
+            <li><a href="HogwartsUniversity.html">University</a></li>
+            <li><a href="HogwartsUniversityAcademics.html">Academics</a></li>
+            <li><a href="HogwartsUniversityAthletics.html">Athletics </a></li>
+            <li><a href="HogwartsUniversityArts.html">Arts</a></li>
+            <li><a href="HogwartsUniversityAdmission.html">Admission</a></li>
+        </ul>
+    </header>
+
+    <div id="background">
+        <br>
+        <h1>Apply for Hogwarts University Here</h1>
+        <div id="form">
+            <br>
+            <div class="form-group">
+                <label for="firstname">What is your first name? </label>
+                <input class="form-control" id="firstname" type="text" placeholder="Your First Name *"
+                    required="required" data-validation-required-message="Please enter your first name."
+                    aria-invalid="false" autocomplete="off">
+                <p class="help-block text-danger"></p>
+
+                <label for="lastname">What is your last name? </label>
+                <input class="form-control" id="lastname" type="text" placeholder="Your Last Name *" required="required"
+                    data-validation-required-message="Please enter your last name." aria-invalid="false"
+                    autocomplete="off">
+                <p class="help-block text-danger"></p>
+
+                <label for="email">What is your email? </label>
+                <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required"
+                    data-validation-required-message="Please enter your email address." aria-invalid="false">
+                <p class="help-block text-danger"></p>
+
+                <label for="phone">What is your phone number? </label>
+                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required"
+                    data-validation-required-message="Please enter your phone number." aria-invalid="false">
+                <p class="help-block text-danger"></p>
+
+                <label for="from">Where are you from? </label>
+                <input type="text" name="from" id="from" placeholder="From*">
+                <p class="help-block text-danger"></p>
+
+                <label for="school">Where do/did go to high school? </label>
+                <input type="text" name="from" id="school" placeholder="What Education Institiution*">
+                <p class="help-block text-danger"></p>
+
+                <label for="learn">Where do/did hear about Hogwarts' program? </label>
+                <input type="text" name="learn" id="learn" placeholder="What Social Media*">
+                <p class="help-block text-danger"></p>
+
+
+            </div>
+            <div class="form-group">
+                <label for="extra"> Tell why you want to come to Hogwarts University</label>
+                <p class="help-block text-danger"></p>
+                <textarea id="extra" name="extra" rows="15" cols="80"
+                    placeholder="Text Here*"></textarea>
+                <p class="help-block text-danger"></p>
+
+                <label for="extra"> What else should we know about you?</label>
+                <p class="help-block text-danger"></p>
+                <textarea class="form-control" id="message" rows="15" cols="80"
+                    placeholder="Text Here"></textarea>
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div id="button">
+            <button id="btn" class="btn" type="submit">Submit Application</button>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>
+            <span class="copyright">Copyright &copy;Hogwarts University 2020 All Rights Reserved</span>
+        </p>
+
+        <p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Assignment 09</title>
+</head>
+<body>
+    <h1>AJAX Assignment</h1>
+    <p>Chick to see Information of the Country</p>
+    <!-- Part 1 -->
+    <div id="part1" style="text-align: center;">
+        <select id="choices_country">
+            <option value="#">Select</option>
+            <option value="usa.txt">USA</option>
+            <option value="mexico.txt">Mexico</option>
+            <option value="russia.txt">Russia</option>
+            <option value="canada.txt">Canada</option>
+        </select>
+        <div id = "output1" style="text-align: center;"></div>
+    </div>
+
+    <p style="text-align: center;">What other information would you like to know?</p> <br>
+    <!-- Part 2 -->
+    <div id="part2" style="text-align: center;">
+        <form action="#">
+            <input type="text" id = "url_input" required>
+            <input type="button" id = "url_sub_btn" value = "submit">
+        </form>
+        <div id= "output2"></div>
+    </div>
+
+    <script src = "assign09.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+body {
+  background-image: url('backgroundBlue.jpg');
+  width: 100%;
+  height: auto;
+  background-size:cover;
+}
+
+.btn {
+  color: purple;
+  background: whitesmoke; 
+  border: 2px solid plum; 
+  border-radius: 6px;
+  margin: 10px; 
+}
+
+h2 .cursiveText{
+  text-align: center; 
+  color:purple; 
+  font-family: cursive;
+ 
+}
+
+.serifText{
+text-align: center; 
+color: blueviolet; 
+font-family: serif;
+}
+
+.sansserifText{
+ text-align: center;
+ color:purple;
+ font-family:sans-serif ;
+}
+
+
+#From iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  width: 150vh; 
+  height: 80vh;
+}
+
+
+.me2{ 
+  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+}
+
+#social1, #social2, #social3{
+  color:  rgb(44, 44, 179);
+  background:whitesmoke; 
+  border: 2px solid rgb(67, 67, 230); 
+  border-radius: 6px;
+  margin: 15px; 
+  float: left;
+}

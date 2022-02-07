@@ -1,0 +1,154 @@
+  @media only screen and (max-width: 500px) {
+   /* For mobile phone */
+    body {
+      width: 100%;
+    }
+  }
+  
+
+
+  /* For desktop: */
+  @media only screen and (min-width: 1920px) {
+  body {width: 8.33%;}
+  body {width: 16.66%;}
+  body {width: 25%;}
+  body {width: 33.33%;}
+  body {width: 41.66%;}
+  body {width: 50%;}
+  body {width: 58.33%;}
+  body {width: 66.66%;}
+  body {width: 75%;}
+  body {width: 83.33%;}
+  body {width: 91.66%;}
+  body {width: 100%;} 
+  }
+
+
+
+  #product{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  .product-list-item{
+    flex: 30%;
+    display: block;
+    text-align: center; 
+    list-style-position: inside;
+  }
+  
+  img{
+    width: 100%;
+  }
+  
+  
+  .product-list-item-details{
+    text-align: center; 
+    list-style-position: inside;
+  }
+  
+  header {
+    background-image: url("head.jpg") ;
+    background-size: cover;
+    padding: 60px;
+    text-align: center;
+    color:#da8a13;
+    font-size: 30px;
+  }
+  
+
+  
+  #firstNameError{
+    visibility: hidden;
+    color:red;
+  }
+  
+  
+  #lastNameError{
+    visibility: hidden;
+    color:red;
+  }
+  
+  
+  #phoneError{
+    visibility: hidden;
+    color:red;
+  }
+  
+  
+  #CCNumError{
+    visibility: hidden;
+    color:red;
+  }
+  
+  
+  #expDateError{
+    visibility: hidden;
+    color:red;
+  }
+  
+  #cvcError{
+    visibility: hidden;
+    color:red;
+  }
+  
+  input[type=text], select {
+      padding: 4px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 120%;
+    }
+    
+    fieldset {
+      width: 550px;
+      margin: auto;
+      background-color: wheat;
+    }
+    
+    footer{
+      background-color:#da8a13;
+    }
+  
+  
+    #social1, #social2{
+      color:#da8a13;
+      border-radius: 6px;
+      margin: 15px; 
+      list-style-position: inside;
+      text-align: center; 
+
+    }
+  
+    .copyright{
+      color:#da8a13; 
+      border-radius: 6px;
+      margin: 15px; 
+      font-size: 120%;
+      text-align: center; 
+      list-style-position: inside; 
+    }
+  
+    #btn{
+      text-align: center; 
+      list-style-position: inside; 
+    }
+  
+    #submit{
+      margin-right: 10px; ;
+    }
+  
+    #clear{
+      margin-left: 10px; ;
+    }
+  
+    footer{
+      background-image: url("background1.jpg");  
+      padding: 30px;
+      text-align: center; 
+      background-size: cover;
+      list-style-position: inside; 
+    }

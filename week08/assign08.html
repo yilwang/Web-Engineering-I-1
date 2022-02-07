@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cake House Bakery</title>
+</head>
+
+<body>
+  <header>
+    <h1
+      style="text-align: center; list-style-position: inside; color:white; font-family: Georgia, 'Times New Roman', Times, serif;">
+      <i><b>Cake House Bakery</b></i></h1>
+    <h2
+      style="text-align: center; list-style-position: inside; color:white; font-family: Georgia, 'Times New Roman', Times, serif;">
+      Welcome to Cake House Bakery</h2>
+    <h3 style="text-align: center; list-style-position: inside; color:wheat; font-family: sans-serif;">A Traditional
+      Taiwanese Bakery</h3>
+    <h4 style="text-align: center; list-style-position: inside; color:wheat; font-family: sans-serif;"><i>
+        Cake House Bakery is a traditional Taiwanese Bakery, baking fresh, healthy, and delicious items daily.<br>
+        We proudly serve a wide variety of traditional Taiwanese options, and bake everything fresh daily.</i>
+    </h4>
+  </header>
+
+  <h1 style="text-align: center; list-style-position: inside;">Choose the Cake(s) You Want.</h1>
+  <h2 style="text-align: center; list-style-position: inside; color:red;">Noted that during COVID-19 period, our labor
+    is limited than ususal.<br>Hence, an order can take one cake per item type.</h2>
+    
+  <form id="mForm" action="" onsubmit="Submitted()">
+    <section id="product">
+      <div class="product-list-item">
+        <figure>
+          <img class="product-image" src="css/Cake1.jpg" alt="Strawberry Cheese Cake" />
+        </figure>
+
+        <div class="product-list-item-details">
+          <p><i><b>Cake House Bakery</b></i></p>
+          <h3>Strawberry Cheese Cake - 8 Inch</h3>
+          <p class="product-list-item-price">
+            <span class="product-price">$25.95</span>
+            <input type="checkbox" name="item_0" oninput="getTotal();">
+          </p>
+        </div>
+      </div>
+
+      <div class="product-list-item">
+        <figure>
+          <img class="product-image" src="css/Cake4.jpg" alt="Strawberry Chocolate Cake" />
+        </figure>
+
+        <div class="product-list-item-details">
+          <p><i><b>Cake House Bakery</b></i></p>
+          <h3>Strawberry Chocolate Cake - 8 Inch</h3>
+          <p class="product-list-item-price">
+            <span class="product-price">$20.95</span>
+            <input type="checkbox" name="item_1" oninput="getTotal();">
+          </p>
+        </div>
+      </div>
+
+      <div class="product-list-item">
+        <figure>
+          <img class="product-image" src="css/Cake2.jpg" alt="Rose Cheese Cake" />
+        </figure>
+
+        <div class="product-list-item-details">
+          <p><i><b>Cake House Bakery</b></i></p>
+          <h3>Rose Cheese Cake - 8 Inch</h3>
+          <p class="product-list-item-price">
+            <span class="product-price">$30.95</span>
+            <input type="checkbox" name="item_2" oninput="getTotal();">
+          </p>
+        </div>
+      </div>
+
+      <div class="product-list-item">
+        <figure>
+          <img class="product-image" src="css/Cake3.jpg" alt="Dark Chococalte Cake" />
+        </figure>
+
+        <div class="product-list-item-details">
+          <p><i><b>Cake House Bakery</b></i></p>
+          <h3>Dark Chococalte Cake - 8 Inch</h3>
+          <p class="product-list-item-price">
+            <span class="product-price">$25.95</span>
+            <input type="checkbox" name="item_3" oninput="getTotal();">
+          </p>
+        </div>
+      </div>
+
+
+      <div class="product-list-item">
+        <figure>
+          <img class="product-image" src="css/Cake5.jpg" alt="Chocolate Mousse Cake" />
+        </figure>
+
+        <div class="product-list-item-details">
+          <p><i><b>Cake House Bakery</b></i></p>
+          <h3>Chocolate Mousse Cake - 8 Inch</h3>
+          <p class="product-list-item-price">
+            <span class="product-price">$20.95</span>
+            <input type="checkbox" name="item_4" oninput="getTotal();">
+          </p>
+        </div>
+      </div>
+
+      <div class="product-list-item">
+        <figure>
+          <img class="product-image" src="css/Cake6.jpg" alt="Layered Mocha Cheese Cake" />
+        </figure>
+
+        <div class="product-list-item-details">
+          <p><i><b>Cake House Bakery</b></i></p>
+          <h3>Layered Mocha Cheese Cake - 8 Inch</h3>
+          <p class="product-list-item-price">
+            <span class="product-price">$25.95</span>
+            <input type="checkbox" name="item_5" oninput="getTotal();">
+          </p>
+        </div>
+      </div>
+
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <fieldset class="order">
+      <legend>
+        <h2><b><i>Start Your Purchase Here</i></b></h2>
+      </legend>
+      <br>
+      <span><b>Your Information</b></span>
+      <br>
+      <br>
+      Your First Name: <input type="text" placeholder="First Name" name="first_name" id="first_name"
+        onblur="validFirstName(this);" required>
+      <span id="firstNameError"></span>
+      <br>
+      Your Last Name: <input type="text" placeholder="Last Name" name="last_name" id="last_name"
+        onblur="validLastName(this);" required>
+      <span id="lastNameError"></span>
+      <br>
+      Shipping Address: <input type="text" placeholder="Street Address, City, State, and Zip.." name="address"
+        id="address" size="40" required />
+      <br>
+      Your Phone Number: <input type="text" placeholder="XXX-XXX-XXXX" name="phone" id="phone" size="12" required>
+      <span id="phoneError">Please enter a phone number in this format: XXX-XXX-XXXX</span>
+      <br>
+      <br>
+      <br>
+      <span><b>Total Field</b></span>
+      <br>
+      <br>
+      <span> Choose Your Payment Type</span>
+      <br>
+      <input type="radio" name="card" id="visa" value="visa" required>Visa
+      <input type="radio" name="card" id="mastercard" value="mastercard" required>Mastercard
+      <input type="radio" name="card" id="americanexpress" value="americanexpress" required>American Express
+      <input type="radio" name="card" id="discover" value="discover" required>Discover
+      <br>
+      Card Number: <input type="text" name="credit_card" placeholder="XXXX-XXXX-XXXX-XXXX" id="cardnumber" size="22"
+        required>
+      <span id="CCNumError">Please enter your card number in this format: 8888-8888-8888-8888</span>
+      <br>
+      Card Expiration Date: <input type="text" name="exp_date" placeholder="MM/YYYY" id="expdate" size="6" maxlength="8"
+        required>
+      <span id="expDateError">Please enter a date in this format: 12/2021</span>
+      <br>
+      CVC*: <input type="text" name="cvc" placeholder="CVC" id="cvc" size="3" maxlength="4" oninput="isCVCValid(this);"
+        required>
+      <span id="cvcError"></span>
+      <br>
+      $Total Amount: <input type="text" name="payment" id="total" size="9" value="--" disabled>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="btn">
+        <input type="submit" name="validate" id="submit" value="Submit Order">
+        <input type="reset" name="reset" id="clear" value="Clear" onclick="resetFields();">
+      </div>
+    </fieldset>
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script type="text/javascript" src="purchase.js"></script>
+
+  <footer>
+    <p>
+      <a href="#" id="social1">Privacy Policy</a>
+      <a href="#" id="social2">Terms of Use</a>
+    </p>
+    <p>
+      <span class="copyright">Copyright &copy; Cake House Bakery 2020</span>
+    </p>
+  </footer>
+</body>
+
+</html>

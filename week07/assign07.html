@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/style.css">
+    <script type="text/javascript" src="calculator.js"></script>
+    <title>Liya Wang's Assign07</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; list-style-position: inside;"> Assignment 07</h1>
+    
+    <p style="text-align: center; list-style-position: inside;">This is a  mortgage calculator </p>
+
+    <form id="calculator">
+        <fieldset class ="cal">
+          <legend>Start Here</legend>
+          APR (must be between 0 and 25.00%)<br>
+
+          <input type="text" name="apr" id="apr" size="6" class="right" onchange="aprIsValid(this.value, 'aprValid'); possiblyCalculate();" required/>%
+          <span class="invalid_input" id="aprValid"><br />INVALID: Input must be between 0 and 25.0%</span>
+          <br>
+          <br>
+          Term length in years (must be an integer greater than 0 and less than or equal to 40)
+          <br>
+
+          <input type="text" name="term" id="term" size="10" onchange="termIsValid(this.value, 'termValid'); possiblyCalculate();" required/>
+          
+          <span class="invalid_input" id="termValid"><br>INVALID: Input must be an integer greater than zero and less than
+            or equal to 40</span>
+          <br>
+          <br>
+          Amount of loan in dollars
+          <br>
+          $<input type="text" name="amount" id="amount" size="9" oninput="amountInput(this.value)" onchange="amountIsValid(this.value, 'amountValid'); possiblyCalculate();" required />
+          <span class="invalid_input" id="amountValid"><br />INVALID: Input must be greater than zero</span><br /><br />
+        </fieldset>
+
+        <fieldset>
+          <legend>Result</legend>
+          Monthly Payment
+          <br>
+          $<input type="text" name="payment" id="payment" size="9" value="--" disabled>
+          <br>
+          <button type="button" id="calculate" onclick="calculatePayment()">Calculate
+          </button>
+
+          <input type="reset" id="clear" onclick="resetFields();">
+        </fieldset>
+      </form>
+
+</body>
+
+</html>

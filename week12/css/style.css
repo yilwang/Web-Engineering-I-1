@@ -1,0 +1,122 @@
+#product{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.product-list-item{
+  flex: 30%;
+  display: block;
+  text-align: center; 
+  list-style-position: inside;
+}
+
+img{
+  width: 100%;
+}
+
+
+.product-list-item-details{
+  text-align: center; 
+  list-style-position: inside;
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: #da8a13;
+  color: white;
+  font-size: 30px;
+}
+
+
+#firstNameError{
+  visibility: hidden;
+  color:red;
+}
+
+
+#lastNameError{
+  visibility: hidden;
+  color:red;
+}
+
+
+#phoneError{
+  visibility: hidden;
+  color:red;
+}
+
+
+#CCNumError{
+  visibility: hidden;
+  color:red;
+}
+
+
+#expDateError{
+  visibility: hidden;
+  color:red;
+}
+
+#cvcError{
+  visibility: hidden;
+  color:red;
+}
+
+input[type=text], select {
+    padding: 4px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 120%;
+  }
+  
+  fieldset {
+    width: 800px;
+    margin: auto;
+    background-color: blanchedalmond;
+  }
+  
+  footer{
+    background-color:#da8a13;
+  }
+
+
+  #social1, #social2{
+    color: white; 
+    border-radius: 6px;
+    margin: 15px; 
+    list-style-position: inside;
+    text-align: center; 
+  }
+
+  .copyright{
+    color:white; 
+    border-radius: 6px;
+    margin: 15px; 
+    font-size: 120%;
+    text-align: center; 
+    list-style-position: inside; 
+  }
+
+  #btn{
+    text-align: center; 
+    list-style-position: inside; 
+  }
+
+  #submit{
+    margin-right: 10px; ;
+  }
+
+  #clear{
+    margin-left: 10px; ;
+  }
+
+  footer{
+    padding: 30px;
+    text-align: center; 
+    list-style-position: inside; 
+  }

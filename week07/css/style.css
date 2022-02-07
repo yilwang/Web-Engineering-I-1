@@ -1,0 +1,43 @@
+body{
+    background-image: url('mortgage.jpg');
+    background-size: cover;
+    
+  }
+  
+#calculator{
+    text-align: center;
+    list-style-position: inside;
+  }
+#cal {
+    border: 2px solid plum; 
+    border-radius: 6px;
+    margin: 10px; 
+  }
+  
+/* for input that needs to be aligned right */
+input.right {  
+    text-align: right;
+  }
+  
+/* calculator */
+.invalid_input {
+    color: red;
+    visibility: hidden;
+  }
+  
+input[type=text], select {
+    padding: 4px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 120%;
+  }
+  
+  fieldset {
+    width: 500px;
+    margin: auto;
+  }
+  
+  

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Theme CSS -->
+  <link href="//cdn.shopify.com/s/files/1/1666/9075/t/2/assets/theme.scss.css?v=4696179947799532730" rel="stylesheet"
+    type="text/css" media="all" />
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="order.js"></script>
+  <title>Cake House Bakery</title>
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align: center; list-style-position: inside; color:white;">Cake House Bakery</h1>
+    <h2 style="text-align: center; list-style-position: inside; color:white;">Welcome to Cake House Bakery</h2>
+    <h2 style="text-align: center; list-style-position: inside; color:wheat;">A Traditional Chinese Bakery</h2>
+    <h3 style="text-align: center; list-style-position: inside; color:wheat;">
+      Cake House Bakery is a traditional Chinese Bakery, baking fresh, healthy, and delicious items daily.<br>
+      We proudly serve a wide variety of traditional Chinese options, and bake everything fresh daily.
+    </h3>
+  </header>
+  <section id="product">
+    <div class="product-list-item">
+      <input type="checkbox" name="item_0" onclick="possiblyCalculate();">
+      <label for="item_0">Strawberry Cheese Cake</label>
+      <figure>
+        <img class="product-image" src="css/Cake1.jpg" alt="Strawberry Cheese Cake" />
+      </figure>
+
+      <div class="product-list-item-details">
+        <p>Cake House Bakery</p>
+        <h3>Strawberry Cheese Cake - 8 Inch</a></h3>
+        <p class="product-list-item-price">
+          <span class="product-price">$25.95</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="product-list-item">
+      <input type="checkbox" name="item_1" onclick="possiblyCalculate();">
+      <label for="item_1">Strawberry Chocolate Cake</label>
+      <figure>
+        <img class="product-image" src="css/Cake4.jpg" alt="Chocolate Strawberry Cake" />
+      </figure>
+
+      <div class="product-list-item-details">
+        <p>Cake House Bakery</p>
+        <h3>Strawberry Chocolate Cake - 8 Inch</a></h3>
+        <p class="product-list-item-price">
+          <span class="product-price">$20.95</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="product-list-item">
+      <input type="checkbox" name="item_2" onclick="possiblyCalculate();">
+      <label for="item_2">Rose Cheese Cake</label>
+      <figure>
+        <img class="product-image" src="css/Cake2.jpg" alt="Rose Cheese Cake" />
+      </figure>
+
+      <div class="product-list-item-details">
+        <p>Cake House Bakery</p>
+        <h3>Strawberry Cheese Cake - 8 Inch</a></h3>
+        <p class="product-list-item-price">
+          <span class="product-price">$30.95</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="product-list-item">
+      <input type="checkbox" name="item_3" onclick="possiblyCalculate();">
+      <label for="item_3">Dark Chococalte Cake</label>
+      <figure>
+        <img class="product-image" src="css/Cake3.jpg" alt="Dark Chococalte Cake" />
+      </figure>
+
+      <div class="product-list-item-details">
+        <p>Cake House Bakery</p>
+        <h3>Dark Chococalte Cake - 8 Inch</a></h3>
+        <p class="product-list-item-price">
+          <span class="product-price">$25.95</span>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="product-list-item">
+      <input type="checkbox" name="item_4" onclick="possiblyCalculate();">
+      <label for="item_4">Chocolate Mousse Cake</label>
+      <figure>
+        <img class="product-image" src="css/Cake5.jpg" alt="Chocolate Mousse Cake" />
+      </figure>
+
+      <div class="product-list-item-details">
+        <p>Cake House Bakery</p>
+        <h3>Chocolate Mousse Cake - 8 Inch</a></h3>
+        <p class="product-list-item-price">
+          <span class="product-price">$20.95</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="product-list-item">
+      <input type="checkbox" name="item_5" onclick="possiblyCalculate();">
+      <label for="item_5">Layered Mocha Cheese Cake</label>
+      <figure>
+        <img class="product-image" src="css/Cake6.jpg" alt="Layered Mocha Cheese Cake" />
+      </figure>
+
+      <div class="product-list-item-details">
+        <p>Cake House Bakery</p>
+        <h3>Layered Mocha Cheese Cake - 8 Inch</a></h3>
+        <p class="product-list-item-price">
+          <span class="product-price">$25.95</span>
+        </p>
+      </div>
+    </div>
+
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <form id="mForm" onsubmit="myFunction()">
+    <fieldset class="cal">
+      <legend><b><i>Start Your Purchase Here</i></b></legend>
+      <br>
+      <span><b>Your Information</b></span>
+      <br>
+      <br>
+      Your First Name: <input type="text" placeholder="First Name" name="first_name" id="first_name"
+        onblur="validFirstName(this);" required />
+      <br>
+      <span id="firstNameError"></span>
+      <br>
+      Your Last Name: <input type="text" placeholder="Last Name" name="last_name" id="last_name"
+        onblur="validLastName(this);" required />
+      <br>
+      <span id="lastNameError"></span>
+      <br>
+      Shipping Address: <input type="text" placeholder="Street Address, City, State, and Zip.." name="address"
+        id="address" required />
+      <br>
+
+      <br>
+      Your Phone Number: <input type="text" placeholder="XXX-XXX-XXXX" name="phone" id="phone" maxlength="12" size="10"
+        onchange="validPhoneNumber(this);" required />
+      <span id="phoneError"></span>
+      <br>
+      <br>
+      <br>
+      <span id="" name="total"><b>Total Field</b></span>
+      <br>
+      <br>
+      <span> Choose Your Payment Type</span>
+      <br>
+      <input type="radio" name="card" id="payment_type" required>Visa
+      <input type="radio" name="card" id="payment_type" required>Mastercard
+      <input type="radio" name="card" id="payment_type" required>American Express
+      <input type="radio" name="card" id="payment_type" required>Discover
+      <br>
+      <br>
+      Card Number<input type="text" name="credit_card" placeholder="XXXX-XXXX-XXXX-XXXX" id="cardnumber" size="16"
+        onipput="isCCNumValid()">
+      <br>
+      <span id="CCNumError"></span>
+      <br>
+      Card Expiration Date<input type="text" name="exp_date" placeholder="MM / YYYY" id="expdate" size="6" maxlength="8"
+        oninput="isExpDateValid()">
+      <br>
+      <span id="expDateError"></span>
+      <br>
+      CVC*<input type="text" name="exp_date" placeholder="CVC" id="cvc" size="3" maxlength="4"
+        oninput="isCVCValid(this)">
+      <br>
+      <span id="cvcError"></span>
+      <br>
+
+      $Total Amount<input type="text" name="payment" id="order" size="9" value="--" disabled>
+      <br>
+      <br>
+      <br>
+      <br>
+      <input type="submit" name="validate" id="submit" value="Submit Order" onclick="calculatePayment()">
+      <input type="reset" name="reset" id="clear" value="Clear" onclick="resetFields();">
+    </fieldset>
+  </form>
+
+
+  <div class="main-footer-wrapper">
+    <footer class="main-footer">
+      <div class="footer-modules showing-3-modules">
+
+        <div class="footer-module footer-link-lists">
+
+          <div class="footer-link-list">
+
+            <h4>Main menu</h4>
+
+            <ul>
+              <li><a href="/pages/about">About Us</a></li>
+              <li><a href="/collections/all">Shop Baked Goods</a></li>
+              <li><a href="/pages/delivery">Delivery</a></li>
+              <li><a href="/pages/pick-up">Pick-Ups</a></li>
+              <li><a href="/pages/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-link-list">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="/pages/locations">Location</a></li>
+              <li><a href="/pages/faqs">FAQs</a></li>
+              <li><a href="/search">Search</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-module footer-text-box">
+          <h4>Location</h4>
+          <div class="rte">
+            <b>Bakery & Retail Location</b><br />
+            525 S Center St,<br />
+            Rexburg, ID 83460 (<a
+              href="https://www.google.com/maps/place/Brigham+Young+University-Idaho/@43.8144101,-111.7854437,17z/data=!3m1!4b1!4m5!3m4!1s0x53540b03dc48a5cf:0x1e5534d3c38ef412!8m2!3d43.8144101!4d-111.783255">map</a>)<br /><br />
+          </div>
+        </div>
+
+        <div class="footer-module footer-connect">
+          <div class="newsletter-subscription">
+            <h4>Newsletter</h4>
+
+            <form action="" method="post" name="mc-embedded-subscribe-form" target="_blank">
+              <input class="newsletter-email" name="EMAIL" type="email" placeholder="your@email.com">
+              <input class="newsletter-submit" type="submit" value="&#57424;">
+            </form>
+          </div>
+
+          <div class="social-networks">
+
+            <h4>Connect with us</h4>
+            <ul>
+              <li class="social-link facebook">
+                <a href="#" target="_blank">
+                  <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <title>Facebook</title>
+                    <path
+                      d="M30.109 0H1.759C.787 0 0 .787 0 1.759v28.35c0 .971.787 1.759 1.759 1.759h15.263V19.527h-4.153v-4.81h4.153v-3.546c0-4.117 2.514-6.358 6.185-6.358 1.76 0 3.271.131 3.712.19v4.301l-2.547.001c-1.997 0-2.384.95-2.384 2.342v3.07h4.763l-.62 4.81h-4.143v12.34h8.121c.971 0 1.759-.787 1.759-1.758V1.76C31.868.787 31.08 0 30.109 0"
+                      fill="#000" fill-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-link instagram">
+                <a href="#" target="_blank">
+                  <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <title>Instagram</title>
+                    <g fill="#0A0A08" fill-rule="evenodd">
+                      <path
+                        d="M16 2.887c4.27 0 4.777.016 6.463.093 1.56.071 2.407.332 2.97.551.747.29 1.28.637 1.84 1.196.56.56.906 1.093 1.196 1.84.219.563.48 1.41.55 2.97.078 1.686.094 2.192.094 6.463 0 4.27-.016 4.777-.093 6.463-.071 1.56-.332 2.407-.551 2.97a4.955 4.955 0 0 1-1.196 1.84c-.56.56-1.093.906-1.84 1.196-.563.219-1.41.48-2.97.55-1.686.078-2.192.094-6.463.094s-4.777-.016-6.463-.093c-1.56-.071-2.407-.332-2.97-.551a4.955 4.955 0 0 1-1.84-1.196 4.955 4.955 0 0 1-1.196-1.84c-.219-.563-.48-1.41-.55-2.97-.078-1.686-.094-2.192-.094-6.463 0-4.27.016-4.777.093-6.463.071-1.56.332-2.407.551-2.97.29-.747.637-1.28 1.196-1.84a4.956 4.956 0 0 1 1.84-1.196c.563-.219 1.41-.48 2.97-.55 1.686-.078 2.192-.094 6.463-.094m0-2.882c-4.344 0-4.889.018-6.595.096C7.703.18 6.54.45 5.523.845A7.84 7.84 0 0 0 2.69 2.69 7.84 7.84 0 0 0 .845 5.523C.449 6.54.179 7.703.1 9.405.023 11.111.005 11.656.005 16c0 4.344.018 4.889.096 6.595.078 1.702.348 2.865.744 3.882A7.84 7.84 0 0 0 2.69 29.31a7.84 7.84 0 0 0 2.833 1.845c1.017.396 2.18.666 3.882.744 1.706.078 2.251.096 6.595.096 4.344 0 4.889-.018 6.595-.096 1.702-.078 2.865-.348 3.882-.744a7.84 7.84 0 0 0 2.833-1.845 7.84 7.84 0 0 0 1.845-2.833c.396-1.017.666-2.18.744-3.882.078-1.706.096-2.251.096-6.595 0-4.344-.018-4.889-.096-6.595-.078-1.702-.348-2.865-.744-3.882A7.84 7.84 0 0 0 29.31 2.69 7.84 7.84 0 0 0 26.477.845C25.46.449 24.297.179 22.595.1 20.889.023 20.344.005 16 .005" />
+                      <path
+                        d="M16 7.786a8.214 8.214 0 1 0 0 16.428 8.214 8.214 0 0 0 0-16.428zm0 13.546a5.332 5.332 0 1 1 0-10.664 5.332 5.332 0 0 1 0 10.664zM26.458 7.462a1.92 1.92 0 1 1-3.84 0 1.92 1.92 0 0 1 3.84 0" />
+                    </g>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="copyright">
+
+        <p role="contentinfo">Copyright &copy;
+          2020
+          <a href="/" title="">Cake House Bakery</a>.<br><a href="/pages/faqs">Click here</a> to read about our
+          freshness guarantee.
+        </p>
+
+
+        <ul class="payment-options">
+
+          <li class="payment-method-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="32" viewBox="0 0 70 32">
+              <path fill="currentColor"
+                d="M69.102 17.219l.399 9.094c-.688.313-3.285 1.688-4.26 1.688h-4.788v-.656c-.546.438-1.549.656-2.467.656H42.933v-2.466c0-.344-.057-.344-.345-.344h-.257v2.81H37.37v-2.924c-.832.402-1.749.402-2.581.402h-.544v2.523h-6.05l-1.434-1.656-1.577 1.656h-9.72V17.221h9.892l1.405 1.663 1.548-1.663h6.652c.775 0 2.037.115 2.581.66v-.66h5.936c.602 0 1.749.115 2.523.66v-.66h8.946v.66c.516-.43 1.433-.66 2.265-.66H62.2v.66c.546-.372 1.32-.66 2.323-.66h4.578zm-34.197 6.652c1.577 0 3.183-.43 3.183-2.581 0-2.093-1.635-2.523-3.069-2.523h-5.878l-2.38 2.523-2.236-2.523h-7.427v7.67h7.312l2.351-2.509 2.266 2.509h3.556v-2.566h2.322zm11.096-.315a1.907 1.907 0 0 0-.946-.66c.516-.172 1.318-.832 1.318-2.036 0-.889-.315-1.377-.917-1.721-.602-.315-1.319-.372-2.266-.372h-4.215v7.67h1.864v-2.796h1.978c.66 0 1.032.058 1.319.344.316.373.316 1.032.316 1.548v.903h1.836v-1.477c0-.688-.058-1.032-.288-1.405zm7.57-3.183v-1.605h-6.136v7.67h6.136v-1.563h-4.33v-1.549h4.244v-1.548h-4.244v-1.405h4.33zm4.674 6.065c1.864 0 2.926-.759 2.926-2.393 0-.774-.23-1.262-.545-1.664-.459-.372-1.119-.602-2.151-.602h-1.004c-.258 0-.487-.057-.717-.115-.201-.086-.373-.258-.373-.545 0-.258.058-.43.287-.602.143-.115.373-.115.717-.115h3.383v-1.634h-3.671c-1.978 0-2.638 1.204-2.638 2.294 0 2.438 2.151 2.322 3.842 2.38.344 0 .544.058.66.173.115.086.23.315.23.544 0 .201-.115.373-.23.488-.173.115-.373.172-.717.172h-3.555v1.62h3.555zm7.197.001c1.864 0 2.924-.76 2.924-2.394 0-.774-.229-1.262-.544-1.664-.459-.372-1.119-.602-2.151-.602h-1.003c-.258 0-.488-.057-.718-.115-.201-.086-.373-.258-.373-.545 0-.258.115-.43.287-.602.144-.115.373-.115.717-.115h3.383v-1.634h-3.671c-1.921 0-2.638 1.204-2.638 2.294 0 2.438 2.151 2.322 3.842 2.38.344 0 .544.058.66.174.115.086.229.315.229.544 0 .201-.114.373-.229.488s-.373.172-.717.172h-3.556v1.62h3.556zm-21.476-5.921c.23.115.373.344.373.659a.924.924 0 0 1-.373.774c-.287.115-.545.115-.889.115l-2.237.058v-1.749h2.237c.344 0 .659 0 .889.143zM36.108 8.646c-.287.172-.544.172-.918.172h-2.265V7.126h2.265c.316 0 .688 0 .918.114.23.144.344.374.344.718 0 .315-.114.602-.344.689zm14.681-1.807l1.262 3.039h-2.523zM30.775 25.792l-2.838-3.183 2.838-3.011v6.193zm4.244-5.419c.66 0 1.09.258 1.09.918s-.43 1.032-1.09 1.032h-2.437v-1.95h2.437zM5.773 9.878l1.291-3.039 1.262 3.039H5.774zm13.132 10.494h4.616l2.036 2.237-2.093 2.265h-4.559v-1.549h4.071v-1.548h-4.071v-1.405zm.172-6.996l-.545 1.377h-3.24l-.546-1.319v1.319H8.524l-.66-1.749H6.287l-.717 1.749H-.002l2.389-5.649L4.624 4h4.789l.659 1.262V4h5.591l1.262 2.724L18.158 4h17.835c.832 0 1.548.143 2.093.602V4h4.903v.602C43.792 4.143 44.853 4 46.057 4h7.082l.66 1.262V4h5.218l.775 1.262V4h5.103v10.753h-5.161l-1.003-1.635v1.635h-6.423l-.717-1.749h-1.577l-.717 1.749h-3.355c-1.318 0-2.294-.316-2.954-.659v.659h-7.971v-2.466c0-.344-.057-.402-.286-.402h-.258v2.867H19.075v-1.377zm24.286-6.967c-.832.831-.975 1.864-1.004 3.011 0 1.377.344 2.266.947 2.925.659.66 1.806.86 2.695.86h2.151l.716-1.692h3.843l.717 1.692h3.727V7.442l3.47 5.763h2.638V5.521h-1.892v5.333l-3.24-5.333h-2.839v7.254l-3.096-7.254h-2.724l-2.638 6.05h-.832c-.487 0-1.003-.115-1.262-.373-.344-.402-.488-1.004-.488-1.836 0-.803.144-1.405.488-1.748.373-.316.774-.431 1.434-.431h1.749V5.52h-1.749c-1.262 0-2.265.286-2.81.889zm-3.784-.889v7.684h1.863V5.52h-1.863zm-8.459 0v7.685h1.806v-2.781h1.979c.66 0 1.09.057 1.376.315.316.401.258 1.061.258 1.491v.975h1.892v-1.519c0-.66-.057-1.004-.344-1.377-.172-.229-.487-.488-.889-.659.516-.23 1.319-.832 1.319-2.036 0-.889-.373-1.377-.976-1.75-.602-.344-1.262-.344-2.208-.344h-4.215zm-7.484.001v7.685h6.165v-1.577H25.5V10.08h4.244V8.503H25.5V7.126h4.301V5.52h-6.165zm-7.512 7.684h1.577l2.695-6.021v6.021h1.864V5.521h-3.011l-2.265 5.219-2.409-5.219h-2.953v7.254L8.468 5.521H5.744l-3.297 7.684h1.978l.688-1.692h3.871l.688 1.692h3.756V7.184z" />
+            </svg>
+          </li>
+
+
+          <li class="payment-method-svg">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="95" height="32" viewBox="0 0 95 32">
+              <path fill="currentColor"
+                d="M50.431 8.059c4.546 0 8.092 3.49 8.092 7.936 0 4.471-3.571 7.961-8.093 7.961-4.638 0-8.115-3.444-8.115-8.051 0-4.334 3.635-7.845 8.115-7.845zm-46.069.286c4.811 0 8.168 3.133 8.168 7.64a7.687 7.687 0 0 1-2.761 5.864C8.308 23.063 6.643 23.61 4.34 23.61H.001V8.345h4.362zm3.47 11.465c1.027-.912 1.639-2.379 1.639-3.847 0-1.464-.612-2.882-1.639-3.798-.984-.892-2.146-1.235-4.065-1.235H2.97v10.096h.797c1.919 0 3.127-.367 4.065-1.216zm6.068 3.801V8.346h2.965v15.265H13.9zm10.223-9.41c3.378 1.238 4.379 2.338 4.379 4.764 0 2.952-2.166 5.015-5.247 5.015-2.261 0-3.904-.896-5.271-2.907l1.914-1.856c.685 1.328 1.825 2.036 3.24 2.036 1.325 0 2.308-.915 2.308-2.152 0-.641-.298-1.189-.891-1.578-.297-.187-.889-.46-2.054-.87-2.784-1.01-3.742-2.085-3.742-4.192 0-2.493 2.055-4.371 4.745-4.371 1.667 0 3.196.571 4.473 1.696l-1.549 2.033c-.778-.867-1.508-1.233-2.398-1.233-1.28 0-2.213.732-2.213 1.694 0 .821.525 1.258 2.307 1.921zm5.315 1.785c0-4.436 3.605-7.985 8.101-7.985 1.278 0 2.352.273 3.653.935v3.504c-1.233-1.213-2.308-1.717-3.72-1.717-2.787 0-4.976 2.313-4.976 5.241 0 3.092 2.123 5.267 5.112 5.267 1.347 0 2.397-.48 3.585-1.671v3.504c-1.347.638-2.443.892-3.72.892-4.519 0-8.034-3.478-8.034-7.97zm35.801 2.615l4.11-10.254h3.216l-6.573 15.655h-1.596l-6.46-15.655h3.24zm8.675 5.011V8.347h8.418v2.585h-5.453v3.388h5.244v2.585h-5.244v4.123h5.453v2.584h-8.418zm20.167-10.76c0 2.336-1.23 3.87-3.469 4.329l4.794 6.43h-3.651l-4.105-6.135h-.388v6.135h-2.969V8.346h4.404c3.425 0 5.384 1.645 5.384 4.506zm-5.956 2.52c1.9 0 2.903-.827 2.903-2.359 0-1.486-1.004-2.266-2.856-2.266h-.911v4.626h.863z" />
+            </svg>
+
+          </li>
+
+          <li class="payment-method-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="32" viewBox="0 0 54 32">
+              <path fill="currentColor"
+                d="M48.366 15.193c.6 0 .9.437.9 1.282 0 1.281-.546 2.209-1.337 2.209-.6 0-.9-.436-.9-1.31 0-1.281.573-2.182 1.337-2.182zm-10.09 3.082c0-.655.491-1.009 1.472-1.009.109 0 .191.027.382.027-.027.982-.545 1.636-1.227 1.636-.382 0-.628-.245-.628-.655zm-11.998-2.427v.327h-1.909c.164-.763.545-1.173 1.091-1.173.518 0 .818.3.818.845zM38.06.002c8.838 0 16.003 7.165 16.003 16.002S46.898 32.003 38.06 32.003a15.845 15.845 0 0 1-10.08-3.594c2.102-2.031 3.707-4.567 4.568-7.44h-1.33c-.833 2.553-2.297 4.807-4.199 6.627a16.117 16.117 0 0 1-4.172-6.62h-1.33a17.345 17.345 0 0 0 4.521 7.432c-2.749 2.219-6.223 3.594-10.036 3.594C7.165 32.002 0 24.839 0 16.003S7.164.002 16.002.002c3.814 0 7.287 1.377 10.036 3.603a17.251 17.251 0 0 0-4.521 7.424h1.33a15.988 15.988 0 0 1 4.172-6.607 15.933 15.933 0 0 1 4.199 6.614h1.33c-.861-2.872-2.466-5.413-4.568-7.443A15.851 15.851 0 0 1 38.06.001zM7.217 20.213h1.691l1.336-8.044H7.572l-1.637 4.99-.082-4.99H3.399l-1.336 8.044h1.582l1.037-6.135.136 6.135h1.173L8.2 14.024zm7.253-.736l.054-.408.382-2.318c.109-.736.136-.982.136-1.309 0-1.254-.791-1.909-2.263-1.909-.627 0-1.2.082-2.045.327l-.246 1.473.163-.028.246-.081c.382-.109.928-.164 1.418-.164.79 0 1.091.164 1.091.6 0 .109 0 .191-.055.409-.273-.027-.518-.054-.709-.054-1.909 0-2.999.927-2.999 2.536 0 1.064.627 1.773 1.554 1.773.791 0 1.364-.246 1.8-.791l-.027.682h1.418l.027-.164.027-.246zm3.518-3.163c-.736-.327-.819-.409-.819-.709 0-.355.3-.519.845-.519.328 0 .791.028 1.227.082l.246-1.5a9.859 9.859 0 0 0-1.5-.137c-1.909 0-2.59 1.009-2.563 2.208 0 .818.382 1.391 1.282 1.828.709.327.818.436.818.709 0 .409-.3.6-.982.6-.518 0-.982-.082-1.527-.245l-.246 1.5.082.027.3.054c.109.027.246.055.464.055.382.054.709.054.928.054 1.8 0 2.645-.682 2.645-2.181 0-.9-.354-1.418-1.2-1.828zm3.762 2.427c-.409 0-.573-.136-.573-.464 0-.082 0-.164.027-.273l.463-2.726h.873l.218-1.609h-.873l.191-.982h-1.691l-.737 4.472-.082.518-.109.654a4.544 4.544 0 0 0-.055.573c0 .954.491 1.445 1.364 1.445a3.55 3.55 0 0 0 1.227-.218l.218-1.445c-.109.054-.273.054-.464.054zm3.982.11c-.982 0-1.5-.381-1.5-1.145 0-.055 0-.109.027-.191h3.382c.163-.682.218-1.145.218-1.636 0-1.446-.9-2.373-2.318-2.373-1.718 0-2.973 1.663-2.973 3.899 0 1.936.982 2.945 2.89 2.945.628 0 1.173-.082 1.773-.273l.273-1.636c-.6.3-1.145.409-1.773.409zm5.426-3.327h.109c.164-.79.382-1.363.655-1.881l-.055-.027h-.164c-.573 0-.9.273-1.418 1.064l.164-1.009h-1.554l-1.064 6.544h1.718c.627-4.008.791-4.69 1.609-4.69zm4.964 4.609l.3-1.827c-.545.273-1.036.409-1.445.409-1.009 0-1.609-.737-1.609-1.963 0-1.773.9-3.027 2.182-3.027.491 0 .928.136 1.528.436l.3-1.745c-.163-.054-.218-.082-.436-.163l-.682-.164a3.385 3.385 0 0 0-.791-.082c-2.263 0-3.845 2.018-3.845 4.88 0 2.155 1.146 3.491 3 3.491.463 0 .872-.082 1.5-.246zm5.399-1.064l.355-2.318c.136-.736.136-.982.136-1.309 0-1.254-.763-1.909-2.236-1.909-.627 0-1.2.082-2.045.327l-.246 1.473.164-.028.218-.081c.382-.109.955-.164 1.446-.164.791 0 1.091.164 1.091.6 0 .109-.027.191-.082.409-.246-.027-.491-.054-.682-.054-1.909 0-3 .927-3 2.536 0 1.064.627 1.773 1.555 1.773.791 0 1.363-.246 1.8-.791l-.028.682h1.418v-.164l.027-.246.054-.327zm2.127 1.145c.627-4.008.791-4.69 1.608-4.69h.109c.164-.79.382-1.363.655-1.881l-.055-.027h-.164c-.572 0-.9.273-1.418 1.064l.164-1.009h-1.554l-1.037 6.544h1.691zm5.181 0h1.608l1.309-8.044h-1.691l-.382 2.291c-.464-.6-.955-.9-1.637-.9-1.5 0-2.782 1.854-2.782 4.035 0 1.636.818 2.7 2.073 2.7.627 0 1.118-.218 1.582-.709zm-37.523-1.935c0-.655.492-1.009 1.447-1.009.136 0 .218.027.382.027-.027.982-.518 1.636-1.228 1.636-.382 0-.6-.245-.6-.655z" />
+            </svg>
+          </li>
+
+          <li class="payment-method-svg">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="49" height="32" viewBox="0 0 49 32">
+              <path fill="currentColor"
+                d="M14.059 10.283h4.24l-6.302 15.472-4.236.003-3.259-12.329c2.318.952 4.379 3.022 5.219 5.275l.42 2.148zm3.357 15.488l2.503-15.501h4.001l-2.503 15.501h-4.002zm14.576-9.277c2.31 1.106 3.375 2.444 3.362 4.211-.032 3.217-2.765 5.295-6.97 5.295-1.796-.02-3.526-.394-4.459-.826l.56-3.469.515.246c1.316.579 2.167.814 3.769.814 1.151 0 2.385-.476 2.396-1.514.007-.679-.517-1.165-2.077-1.924-1.518-.74-3.53-1.983-3.505-4.211.024-3.012 2.809-5.116 6.765-5.116 1.55 0 2.795.339 3.586.651l-.542 3.36-.359-.178a7.042 7.042 0 0 0-2.995-.595c-1.568 0-2.293.689-2.293 1.333-.01.728.848 1.204 2.246 1.923zm14.207-6.209l3.239 15.49h-3.714s-.368-1.782-.488-2.322l-5.125-.008c-.156.42-.841 2.331-.841 2.331h-4.205l5.944-14.205c.419-1.011 1.138-1.285 2.097-1.285h3.093zm-4.936 9.989h3.322c-.159-.775-.927-4.474-.927-4.474l-.27-1.337c-.202.581-.554 1.52-.531 1.479 0 0-1.262 3.441-1.594 4.332zm-31.54-1.572C8.075 14.129 4.439 11.711 0 10.593l.053-.322h6.453c.87.034 1.573.326 1.815 1.308z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>

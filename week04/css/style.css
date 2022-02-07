@@ -1,0 +1,95 @@
+
+
+
+  header {
+    background-color: #fed110;
+    width: 100%;
+    border: 0px;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+
+  header p {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: cursive;
+    text-transform: uppercase;
+    margin: 15px;
+  }
+
+
+  li {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  ul li a {
+    color: white;
+    font-weight: 100;
+    font-size: 25px;
+    background-color: gray;
+    padding: 10px;
+    color: white;
+    border-color: gray;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+
+
+ .copyright {
+    font-size: 10px;
+    line-height: 40px;
+    color: white;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  }
+  
+  footer {
+    margin-top: 0px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-image: url("footer.jpg");
+  }
+  
+  footer p a{
+    color: white;
+    margin-left: 15px;
+    padding-bottom:15px ;
+    font-size: 10px;
+    margin: 0px;
+  }
+
+
+  footer p{
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+
+  label {
+    font-family: sans-serif;
+    font-size: 80px;
+    margin-left: 150px;
+
+}
+.btn {
+  background-color: #fed136;
+  font-size: 20px;
+  padding: 30px;
+  color: white;
+  border-color: #fed136;
+  font-weight: 700;
+  border-radius: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#button{
+  text-align: center;
+}

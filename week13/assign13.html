@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>BYU-Idaho On-Campus Piano Competition</title>
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align: center; color:white;">
+      <i><b>Music Department of BYU-Idaho</b></i></h1>
+    <h2 style="text-align: center; color:white;">
+      Welcome to Music Department</h2>
+
+  </header>
+  <h2 style="text-align: center; color:black;">Annual Piano
+    Competition at BYU-Idaho</h2>
+  <p>The Brigham Young University Annual Piano competition, now in its 14th year, strives to provide university
+    students
+    with performing opportunities, and raise the standard of excellence of young pianists. This is a national
+    competition with no geographic restrictions. Information regarding repertoire requirements, award amounts, how to
+    apply will be announced soon.</p>
+
+  <p> The Saturday, April 11th competition will be followed by a Recital and Awards Presentation on Sunday, April 20th,
+    2020 at 3:00 in the Ruth Recital Hall, and will include performances by the first, second, and third place
+    winners, and must be attended by all Honorable Mention winners. Absences in either category will
+    result in cancellation of the award. The first-place winner in the oldest age group will be granted a Dean’s
+    Scholarship for study in the Brigham Young University - Idaho Department of Music.</p>
+
+  <h2 style="text-align: center;">Apply the Competition Below</h2>
+
+  <form id="mForm" action="assign13.php" method="POST">
+    <fieldset class="application">
+      <legend>
+        <h2><b><i>Start Your Application Here</i></b></h2>
+      </legend>
+
+      <br>
+      <section id="performance">
+        <span>Performance Type :</span>
+        <input type="checkbox" id="solo" name="performance" value="solo">
+        <label for="beginner">Solo</label>
+        <input type="checkbox" id="duet" name="performance" value="duet">
+        <label for="duet">Duet</label>
+        <input type="checkbox" id="concerto" name="performance" value="concerto">
+        <label for="concerto">Concerto</label>
+      </section>
+      <br>
+      <section>
+        Your First Name: <input type="text" placeholder="First Name" name="first_name" id="first_name"
+          onblur="validFirstName(this);" required>
+        <span id="firstNameError"></span>
+      </section>
+      <br>
+
+      <section>
+        Your Last Name: <input type="text" placeholder="Last Name" name="last_name" id="last_name"
+          onblur="validLastName(this);" required>
+        <span id="lastNameError"></span>
+      </section>
+      <br>
+
+      <section>
+        Your Student ID: <input type="text" placeholder="XX-XXXX-XXX" name="student_id" id="student_id" size="10"
+          required>
+        <span id="studentIDError"></span>
+      </section>
+      <br>
+
+      <!-- I did not know how to the duet performance type part that requires the listing of two students. -->
+
+      <section id="student_2">
+        <section>
+          Your First Name: <input type="text" placeholder="First Name" name="first_name_2" id="first_name_2"
+            onblur="validFirstName(this);" required>
+          <span id="firstNameError2"></span>
+        </section>
+        <br>
+
+        <section>
+          Your Last Name: <input type="text" placeholder="Last Name" name="last_name_2" id="last_name_2"
+            onblur="validLastName(this);" required>
+          <span id="lastNameError2"></span>
+        </section>
+        <br>
+
+        <section>
+          Your Student ID: <input type="text" placeholder="XX-XXXX-XXX" name="student_id_2" id="student_id_2" size="10"
+            required>
+          <span id="studentIDError2"></span>
+        </section>
+        <br>
+      </section>
+
+      <!-- I did not know how to make the type radio required. -->
+      <section id="skill">
+        <span>Skill Level :</span>
+        <input type="radio" id="beginner" name="beginner" value="yes">
+        <label for="beginner">Beginner</label>
+        <input type="radio" id="intermediate" name="intermediate" value="yes">
+        <label for="intermediate">Intermediate</label>
+        <input type="radio" id="pre-advanced" name="pre-advanced" value="yes">
+        <label for="pre-advanced">Pre-advanced</label>
+        <input type="radio" id="advanced" name="advanced" value="yes">
+        <label for="advanced">Advanced</label>
+      </section>
+
+      <br>
+        <!-- I did not know how to make the drop-down list required. -->
+      <section id="instruments">
+        <label for="instrument">Instrument :</label>
+        <select id="instrument" name="instrument">
+          <option value="--">--</option>
+          <option value="piano">Piano</option>
+          <option value="voice">Voice</option>
+          <option value="string">String</option>
+          <option value="organ">Organ</option>
+          <option value="other">Other</option>
+        </select>
+      </section>
+      <br>
+      <section>
+        Location: <input type="text" placeholder="On-Campus Location" name="location" id="lication" size="30" required>
+      </section>
+      <br>
+      <section>
+        Room Number: <input type="text" placeholder="Room #" name="room" id="room" size="6" required>
+      </section>
+      <br>
+      <br>
+      <div id="btn">
+        <input type="submit" name="register" id="submitBtn" value="Register">
+        <input type="reset" name="clear" id="clear" value="Clear" onclick="resetFields();">
+      </div>
+    </fieldset>
+  </form>
+  <br>
+  <br>
+  <!-- Part 2 -->
+  <div id="output2"></div>
+
+  <br>
+  <br>
+  <script type="text/javascript" src="apply.js"></script>
+
+  <footer>
+    <p>
+      <span class="copyright">Copyright &copy; BYU-Idaho Piano Competition 2020</span>
+    </p>
+
+    <p>
+      <a href="#" id="social1">Privacy Policy</a>
+      <a href="#" id="social2">Terms of Use</a>
+    </p>
+  </footer>
+</body>
+
+</html>
+
+
+ <!-- I did not do the PHP file handling parts- (), file_get_contents(), and file_put_contents().-->
+ <!-- I may not finish the additional display requirement.-->
